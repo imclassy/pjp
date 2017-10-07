@@ -1,6 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="bg-image"></div>
+    <div class="transparent-bg"></div>
     <div class="content">
       <div class="hello col-md-6 col-md-offset-3">
         <h1>{{ msg }}</h1>
@@ -72,10 +73,19 @@ p{
   left: 0;
   z-index: -1;
 }
+
+.transparent-bg{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.6);
+}
+
 .hello{
   margin-top: 60px;
   text-align: center;
   color: #FFFFFF;
-  background-color: rgba(0,0,0, 0.6);
 }
 </style>
