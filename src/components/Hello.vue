@@ -1,7 +1,6 @@
 <template>
   <div class="container-fluid">
-    <div class="bg-image"></div>
-    <div class="transparent-bg"></div>
+    <background></background>
     <div class="content">
       <div class="hello col-md-6 col-md-offset-3">
         <h1>{{ msg }}</h1>
@@ -26,8 +25,12 @@
 </template>
 
 <script>
+
+import Background from './Background.vue'
+
 export default {
   name: 'hello',
+  components: {Background},
   data () {
     return {
       msg: 'Pedro Jaraba',
@@ -40,9 +43,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-body{
-  background:url("../assets/big-data.jpg");
-}
 
 h1{
   font-family: "brandon-grotesque", sans-serif !important;
@@ -64,24 +64,7 @@ a {
 p{
   text-align: justify
 }
-.bg-image{
-  background-image:url("../assets/big-data.jpg");
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
 
-.transparent-bg{
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0,0,0, 0.6);
-}
 
 .hello{
   margin-top: 60px;
