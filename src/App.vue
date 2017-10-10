@@ -12,11 +12,19 @@ export default {
 </script>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro|Roboto|Source+Sans+Pro');
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+h1{
+  font-family: 'Maven Pro', sans-serif;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /*color: #2c3e50;*/
-  /*margin-top: 60px;*/
 }
 </style>

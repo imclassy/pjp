@@ -12,9 +12,6 @@ export default {
 </script>
 
 <style scoped>
-body{
-  background:url("../assets/big-data.jpg");
-}
 
 .bg-image{
   background-image:url("../assets/big-data.jpg");
@@ -32,7 +29,7 @@ body{
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0,0,0, 0.6);
+  background-color: rgba(0,0,0, 0.75);
 }
 
 </style>

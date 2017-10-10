@@ -3,7 +3,7 @@
     <background></background>
     <div class="content">
       <div class="hello col-md-6 col-md-offset-3">
-        <h1>{{ msg }}</h1>
+        <h1>{{ title }}</h1>
         </br>
         <p id="intro">
           {{intro1}}
@@ -11,14 +11,12 @@
           {{intro2}}
         </p>
         </br>
-        <img src="../assets/profile_pic_1.png">
+        <img id="hello-img" src="../assets/profile_pic_1.png">
+        </br>
+        </br>
+        <social-icons></social-icons>
         <hr>
-        <ul>
-          <li><a href="http://router.vuejs.org/" target="_blank">About</a></li>
-          <li><a href="http://vuex.vuejs.org/" target="_blank">Skills</a></li>
-          <li><a href="http://vue-loader.vuejs.org/" target="_blank">Portfolio</a></li>
-          <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">Contact</a></li>
-        </ul>
+        <nav-links></nav-links>
       </div>
     </div>
   </div>
@@ -27,13 +25,16 @@
 <script>
 
 import Background from './Background.vue'
+import SocialIcons from './SocialIcons.vue'
+import NavLinks from './NavLinks.vue'
 
 export default {
   name: 'hello',
-  components: {Background},
+  components: {Background, SocialIcons, NavLinks },
   data () {
     return {
-      msg: 'Pedro Jaraba',
+      english: true,
+      title: 'PEDRO JARABA',
       intro1: 'Hello! My name is Pedro Jaraba, I am a Computer Engineer with experience in software development, applications support, database design and project implementation.',
       intro2: 'I possess a varied skillset including backend development in Java and Oracle Forms, data analysis and visualization.'
     }
@@ -44,31 +45,17 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-h1{
-  font-family: "brandon-grotesque", sans-serif !important;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #F5F5F5;
+#hello-img{
+  border: 2px solid #FFFFFF;
 }
 
 p{
-  text-align: justify
+  text-align: justify;
 }
 
-
 .hello{
-  margin-top: 60px;
+  margin-top: 40px;
   text-align: center;
-  color: #FFFFFF;
+  color: #F5F5F5;
 }
 </style>
