@@ -24,13 +24,13 @@
 
 <script>
 
-import Background from './Background.vue'
-import SocialIcons from './SocialIcons.vue'
-import NavLinks from './NavLinks.vue'
+import Background from './Background'
+import SocialIcons from './SocialIcons'
+import NavLinks from './NavLinks'
 
 export default {
   name: 'hello',
-  components: {Background, SocialIcons, NavLinks },
+  components: { Background, SocialIcons, NavLinks },
   data () {
     return {
       english: true,
@@ -54,7 +54,8 @@ p{
 }
 
 .hello{
-  margin-top: 40px;
+  margin-top: 7%;
+  /*padding-top: 10%;*/
   text-align: center;
   color: #F5F5F5;
 }
