@@ -2,30 +2,28 @@
     <footer class="footer navbar-fixed-bottom">
       <div class="container text-center links">
         <ul>
-          <li><a href="#" v-on:click="toggle_english" v-bind:class="{ underlighted: english }">English</a></li>
-          <li><a href="#" v-on:click="toggle_spanish" v-bind:class="{ underlighted: !english }">Español</a></li>
+          <li><a href="#" @click="toggleEnglish(true)" v-bind:class="{ underlighted: english }">English</a></li>
+          <li><a href="#" @click="toggleEnglish(false)" v-bind:class="{ underlighted: !english }">Español</a></li>
         </ul>
       </div>
     </footer>
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'app-footer',
-  data () {
-    return {
-      english: true
-    }
+
+  computed: {
+    ...mapGetters({
+      english: 'english'
+    })
   },
   methods: {
-    toggle_english: function () {
-      this.english = true
-    },
-
-    toggle_spanish: function () {
-      this.english = false
-    }
+    ...mapActions([
+      'toggleEnglish'
+    ])
   }
 }
 
@@ -36,11 +34,12 @@ footer{
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: #FFF;
+  height: 35px;
 }
 
  li {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 1%;
 }
 
 a {
@@ -57,7 +56,7 @@ ul {
 }
 
 .links{
-  margin-top: 10px;
+  margin-top: 1%;
 }
 
 

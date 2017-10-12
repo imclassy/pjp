@@ -19,7 +19,8 @@ export default {
 
 body{
   font-family: 'Roboto', sans-serif;
-  padding-bottom: 15px;
+  padding-bottom: 50px;
+  height: 100%;
 }
 
 h1{

@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <background></background>
-    <div class="content">
+    <div class="content vertical-center">
       <div class="hello col-md-6 col-md-offset-3">
         <h1>{{ title }}</h1>
         </br>
@@ -54,9 +54,18 @@ p{
 }
 
 .hello{
-  margin-top: 7%;
+  /*margin-top: 7%;*/
   /*padding-top: 10%;*/
   text-align: center;
-  color: #F5F5F5;
+  color: #F5F5F5;  
 }
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
 </style>
