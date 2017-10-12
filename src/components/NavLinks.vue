@@ -1,16 +1,36 @@
 <template>
   <ul>
-          <li><a href="http://router.vuejs.org/" target="_blank">ABOUT</a></li>
-          <li><a href="http://vuex.vuejs.org/" target="_blank">SKILLS</a></li>
-          <li><a href="http://vue-loader.vuejs.org/" target="_blank">PORTFOLIO</a></li>
-          <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">CONTACT</a></li>
-        </ul>
+    <li><router-link to="/about">{{about}}</router-link></li>
+    <li><router-link to="/skills">{{skills}}</router-link></li>
+    <li><router-link to="/portfolio">{{portfolio}}</router-link></li>
+    <li><router-link to="/contact">{{contact}}</router-link></li>
+  </ul>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-  name: 'nav-links'
+  name: 'nav-links',
+  computed: {
+    ...mapGetters({
+      english: 'english'
+    }),
+    about: function () {
+      return this.english ? 'ABOUT' : 'ACERCA DE'
+    },
+    skills: function () {
+      return this.english ? 'SKILLS' : 'CONOCIMIENTOS'
+    },
+    portfolio: function () {
+      return this.english ? 'PORTFOLIO' : 'PORTAFOLIO'
+    },
+    contact: function () {
+      return this.english ? 'CONTACT' : 'CONTACTO'
+    }
+  }
 }
+
 </script>
 
 <style scoped>

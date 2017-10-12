@@ -2,8 +2,8 @@
     <footer class="footer navbar-fixed-bottom">
       <div class="container text-center links">
         <ul>
-          <li><a href="#" @click="toggleEnglish(true)" v-bind:class="{ underlighted: english }">English</a></li>
-          <li><a href="#" @click="toggleEnglish(false)" v-bind:class="{ underlighted: !english }">Español</a></li>
+          <li><a role="button" @click="toggleEnglish(true)" v-bind:class="{ underlighted: english }">English</a></li>
+          <li><a role="button" @click="toggleEnglish(false)" v-bind:class="{ underlighted: !english }">Español</a></li>
         </ul>
       </div>
     </footer>

@@ -1,16 +1,19 @@
 <template>
   <div id="app" >
     <router-view></router-view>
+    <background></background>
     <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-import AppFooter from './components/AppFooter.vue'
-export default {
-  name: 'app',
-  components: { AppFooter }
-}
+  import AppFooter from './components/AppFooter'
+  import Background from './components/Background'
+
+  export default {
+    name: 'app',
+    components: { AppFooter, Background }
+  }
 </script>
 
 <style>
@@ -21,6 +24,7 @@ body{
   font-family: 'Roboto', sans-serif;
   padding-bottom: 50px;
   height: 100%;
+  color: #F5F5F5;
 }
 
 h1{
@@ -30,5 +34,17 @@ h1{
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.content{
+  z-index: 999;
 }
 </style>

@@ -1,8 +1,7 @@
 <template>
   <div class="container-fluid">
-    <background></background>
-    <div class="content vertical-center">
-      <div class="hello col-md-6 col-md-offset-3">
+    <div class="vertical-center">
+      <div class="content hello col-md-6 col-md-offset-3">
         <h1>{{ title }}</h1>
         </br>
         <p id="intro">
@@ -27,16 +26,33 @@
 import Background from './Background'
 import SocialIcons from './SocialIcons'
 import NavLinks from './NavLinks'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'hello',
   components: { Background, SocialIcons, NavLinks },
+  computed: {
+    ...mapGetters({
+      english: 'english'
+    }),
+    intro1: function () {
+      if (this.english === true) {
+        return 'Hello! My name is Pedro Jaraba, I am a Computer Engineer with experience in software development, applications support, database design and project implementation.'
+      } else {
+        return 'Hola! Mi nombre es Pedro Jaraba, soy un ingeniero de sistemas con experiencia en desarrollo de software, soporte de aplicaciones, diseno de bases de datos e implementacion de proyectos.'
+      }
+    },
+    intro2: function () {
+      if (this.english === true) {
+        return 'I possess a varied skillset including backend development in Java, Kotlin and Oracle Forms, data analysis and visualization.'
+      } else {
+        return 'Poseo un conjunto variado de habilidades incluyendo desarrollo backend en Java, Kotlin y Oracle Forms, analisis y visualizacion de datos.'
+      }
+    }
+  },
   data () {
     return {
-      english: true,
-      title: 'PEDRO JARABA',
-      intro1: 'Hello! My name is Pedro Jaraba, I am a Computer Engineer with experience in software development, applications support, database design and project implementation.',
-      intro2: 'I possess a varied skillset including backend development in Java and Oracle Forms, data analysis and visualization.'
+      title: 'PEDRO JARABA'
     }
   }
 }
@@ -53,19 +69,5 @@ p{
   text-align: justify;
 }
 
-.hello{
-  /*margin-top: 7%;*/
-  /*padding-top: 10%;*/
-  text-align: center;
-  color: #F5F5F5;  
-}
-
-.vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-
-  display: flex;
-  align-items: center;
-}
 
 </style>
