@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer navbar-fixed-bottom">
+    <footer class="footer">
       <div class="container text-center links">
         <ul>
           <li><a role="button" @click="toggleEnglish(true)" v-bind:class="{ underlighted: english }">English</a></li>
@@ -34,7 +34,8 @@ footer{
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: #FFF;
-  height: 35px;
+  z-index: 9999;
+  position: relative;
 }
 
  li {

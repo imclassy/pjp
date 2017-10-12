@@ -1,8 +1,8 @@
 <template>
   <div id="app" >
     <router-view></router-view>
-    <background></background>
     <app-footer></app-footer>
+    <background></background>
   </div>
 </template>
 
@@ -22,7 +22,6 @@
 
 body{
   font-family: 'Roboto', sans-serif;
-  padding-bottom: 50px;
   height: 100%;
   color: #F5F5F5;
 }
