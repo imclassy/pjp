@@ -4,6 +4,7 @@
     <li><router-link to="/skills">{{skills}}</router-link></li>
     <li><router-link to="/portfolio">{{portfolio}}</router-link></li>
     <li><router-link to="/contact">{{contact}}</router-link></li>
+    <li><router-link to="/">{{home}}</router-link></li>
   </ul>
 </template>
 
@@ -27,6 +28,9 @@ export default {
     },
     contact: function () {
       return this.english ? 'CONTACT' : 'CONTACTO'
+    },
+    home: function () {
+      return this.english ? 'HOME' : 'INICIO'
     }
   }
 }
