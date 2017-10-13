@@ -5,7 +5,8 @@
             <h1>{{title}}</h1>
             <br>
             <p>{{text}}</p>
-            <img id="family-img" src="../assets/family.png">
+            <img  src="../assets/family.png">
+            <img  src="../assets/special_date.png">
             <hr>
             <nav-links></nav-links>
         </div>
@@ -37,7 +38,7 @@ export default {
 </script>
 
 <style scoped>
-#family-img{
+img{
   border: 2px solid #FFFFFF;
 }
 </style>
