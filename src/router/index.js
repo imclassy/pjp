@@ -4,6 +4,7 @@ import Hello from '@/components/Hello'
 import About from '@/components/About'
 import Skills from '@/components/Skills'
 import Contact from '@/components/Contact'
+import Portfolio from '@/components/Portfolio'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/contact/',
       name: 'Contact',
       component: Contact
+    },
+    {
+      path: '/portfolio/',
+      name: 'Portfolio',
+      component: Portfolio
     }
   ]
 })
