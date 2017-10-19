@@ -1,18 +1,16 @@
 <template>
   <div id="app" >
     <router-view></router-view>
-    <app-footer></app-footer>
     <background></background>
   </div>
 </template>
 
 <script>
-  import AppFooter from './components/AppFooter'
   import Background from './components/Background'
 
   export default {
     name: 'app',
-    components: { AppFooter, Background }
+    components: { Background }
   }
 </script>
 

@@ -1,4 +1,5 @@
 <template>
+<div>
   <ul>
     <li><router-link to="/">{{home}}</router-link></li>
     <li><router-link to="/about">{{about}}</router-link></li>
@@ -6,13 +7,18 @@
     <li><router-link to="/portfolio">{{portfolio}}</router-link></li>
     <li><router-link to="/contact">{{contact}}</router-link></li>
   </ul>
+  <language-options></language-options>
+  
+</div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import LanguageOptions from './LanguageOptions'
 
 export default {
   name: 'nav-links',
+  components: { LanguageOptions },
   computed: {
     ...mapGetters({
       english: 'english'
