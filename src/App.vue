@@ -16,7 +16,7 @@
 
 <style>
 
-@import url('https://fonts.googleapis.com/css?family=Maven+Pro|Roboto|Source+Sans+Pro');
+
 
 body{
   font-family: 'Roboto', sans-serif;
@@ -43,5 +43,15 @@ h1{
 
 .content{
   z-index: 999;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Maven Pro';
+  src: url('./assets/fonts/Maven_Pro/MavenPro-Regular.ttf') format('truetype');
 }
 </style>

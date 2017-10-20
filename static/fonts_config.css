@@ -1,0 +1,15 @@
+  /* latin-ext */
+  @font-face {
+    font-family: 'Maven Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Maven Pro Regular'), local('MavenPro-Regular'), url('fonts/Maven_Pro/MavenPro-Regular.ttf') format('truetype');
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url('fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+  }
+  
