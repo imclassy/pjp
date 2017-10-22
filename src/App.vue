@@ -15,8 +15,19 @@
 </script>
 
 <style>
-
-
+@font-face {
+    font-family: 'Maven Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Maven Pro Regular'), url('./assets/fonts/Maven_Pro/MavenPro-Regular.ttf') format('truetype');
+  }
+  /* cyrillic-ext */
+  @font-face {
+    font-family: 'Roboto';  
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), url('./assets/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+  }
 
 body{
   font-family: 'Roboto', sans-serif;
@@ -45,13 +56,4 @@ h1{
   z-index: 999;
 }
 
-@font-face {
-    font-family: 'Roboto';
-    src: url('./assets/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Maven Pro';
-  src: url('./assets/fonts/Maven_Pro/MavenPro-Regular.ttf') format('truetype');
-}
 </style>
