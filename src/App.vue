@@ -15,19 +15,7 @@
 </script>
 
 <style>
-@font-face {
-    font-family: 'Maven Pro';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Maven Pro Regular'), url('./assets/fonts/Maven_Pro/MavenPro-Regular.ttf') format('truetype');
-  }
-  /* cyrillic-ext */
-  @font-face {
-    font-family: 'Roboto';  
-    font-style: normal;
-    font-weight: 400;
-    src: local('Roboto'), url('./assets/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
-  }
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro|Roboto|Source+Sans+Pro');
 
 body{
   font-family: 'Roboto', sans-serif;
