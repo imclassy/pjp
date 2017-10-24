@@ -69,10 +69,10 @@ export default {
       return this.english ? 'SKILLS' : 'CONOCIMIENTOS'
     },
     design: function () {
-      return this.english ? 'DATABASE DESIGN' : 'DISENO DE BASES DE DATOS'
+      return this.english ? 'DATABASE DESIGN' : 'DISEÑO DE BASES DE DATOS'
     },
     analysis: function () {
-      return this.english ? 'DATA ANALYSIS' : 'ANALISIS DE DATOS'
+      return this.english ? 'DATA ANALYSIS' : 'ANÁLISIS DE DATOS'
     }
   }
 }

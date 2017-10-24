@@ -39,14 +39,14 @@ export default {
       if (this.english === true) {
         return 'Hello! My name is Pedro Jaraba, I am a Computer Engineer with experience in software development, applications support, database design and project implementation.'
       } else {
-        return 'Hola! Mi nombre es Pedro Jaraba, soy un ingeniero de sistemas con experiencia en desarrollo de software, soporte de aplicaciones, diseno de bases de datos e implementacion de proyectos.'
+        return 'Hola! Mi nombre es Pedro Jaraba, soy un ingeniero de sistemas con experiencia en desarrollo de software, soporte de aplicaciones, diseño de bases de datos e implementacion de proyectos.'
       }
     },
     intro2: function () {
       if (this.english === true) {
         return 'I possess a varied skillset including backend development in Java, Kotlin and Oracle Forms, data analysis and visualization.'
       } else {
-        return 'Poseo un conjunto variado de habilidades incluyendo desarrollo backend en Java, Kotlin y Oracle Forms, analisis y visualizacion de datos.'
+        return 'Poseo un conjunto variado de habilidades incluyendo desarrollo backend en Java, Kotlin y Oracle Forms, análisis y visualizacion de datos.'
       }
     }
   },

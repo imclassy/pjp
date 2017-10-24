@@ -29,8 +29,8 @@ export default {
       return this.english ? 'ABOUT' : 'ACERCA DE'
     },
     text: function () {
-      const englishText = 'I am a 23 years old guy who likes to learn, commit to and master new things, including topics about software design, programming languages and strength sports. I live alone since age 16, so I developed a strong sense of hard work and responsibility, but I love my family.'
-      const spanishText = 'Soy un joven de 23 anos que le gusta aprender, dedicarse y perfeccionar nuevas cosas, incluyendo temas acerca de diseno de software y deportes de fuerza. Vivo solo desde los 16 anos, por lo tanto, he desarrollado un sentido de trabajo fuerte y responsabilidad, sin embargo, amo mucho a mi familia.'
+      const englishText = 'I am a 23 years old guy who likes to learn, commit to and master new things, including topics about software design, programming languages and different sports. I live alone since age 16, so I developed a strong sense of hard work and responsibility, but I love my family.'
+      const spanishText = 'Soy un joven de 23 años que le gusta aprender, dedicarse y perfeccionar nuevas cosas, incluyendo temas acerca de diseño de software y distintos deportes. Vivo solo desde los 16 anos, por lo tanto, he desarrollado un sentido de trabajo fuerte y responsabilidad, sin embargo, amo mucho a mi familia.'
       return this.english ? englishText : spanishText
     }
   }
