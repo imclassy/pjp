@@ -63,12 +63,14 @@ module.exports = {
         }
       },
       { 
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'file-loader',
+        //test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        test: /\.(woff|woff2|eot|ttf|svg)(\?.*$|$)/,
+        loader: 'url-loader?importLoaders=1&limit=100000'
+        /*loader: 'file-loader',
         options: {
           limit: 1000000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
-        }
+        }*/
       }
     ]
   }

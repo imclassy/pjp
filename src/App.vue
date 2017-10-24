@@ -15,21 +15,16 @@
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Maven+Pro|Roboto|Source+Sans+Pro');
-
-body{
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-family: 'Roboto', sans-serif;
   height: 100%;
   color: #F5F5F5;
 }
 
-h1{
+#app h1{
   font-family: 'Maven Pro', sans-serif;
-}
-
-#app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .vertical-center {
