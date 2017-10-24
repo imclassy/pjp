@@ -21,6 +21,7 @@ export default {
   top: 0;
   left: 0;
   z-index: -1;
+  background-size: cover;
 }
 
 .transparent-bg{

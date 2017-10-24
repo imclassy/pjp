@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container">
     <div class="vertical-center">
       <div class="content hello col-md-6 col-md-offset-3">
         <h1>{{ title }}</h1>

@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container">
     <div class="vertical-center">
         <div class="content col-md-6 col-md-offset-3">
             <h1>{{title}}</h1>
@@ -39,6 +39,10 @@ export default {
 
 <style scoped>
 img{
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
   border: 2px solid #FFFFFF;
 }
 </style>
