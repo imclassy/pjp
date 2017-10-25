@@ -1,11 +1,11 @@
 <template>
 <div>
   <ul>
-    <li><router-link to="/">{{home}}</router-link></li>
-    <li><router-link to="/about">{{about}}</router-link></li>
-    <li><router-link to="/skills">{{skills}}</router-link></li>
-    <li><router-link to="/portfolio">{{portfolio}}</router-link></li>
-    <li><router-link to="/contact">{{contact}}</router-link></li>
+    <li><router-link to="/" :class="{highlight : $route.name==='Hello'}">{{home}}</router-link></li>
+    <li><router-link to="/about" :class="{highlight : $route.name==='About'}">{{about}}</router-link></li>
+    <li><router-link to="/skills" :class="{highlight : $route.name==='Skills'}">{{skills}}</router-link></li>
+    <li><router-link to="/portfolio" :class="{highlight : $route.name==='Portfolio'}">{{portfolio}}</router-link></li>
+    <li><router-link to="/contact" :class="{highlight : $route.name==='Contact'}">{{contact}}</router-link></li>
   </ul>
   <language-options></language-options>
   
@@ -53,9 +53,20 @@ a {
     color: #F5F5F5;
 }
 
+@media(max-width: 550px){
+  li{
+    padding: 2px;
+    margin: 0 0px;
+  }
+}
+
 ul {
   list-style-type: none;
   padding: 0;
+}
+
+.highlight{
+  text-decoration: underline;
 }
 
 </style>

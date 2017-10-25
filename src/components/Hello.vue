@@ -66,8 +66,13 @@ export default {
 }
 
 p{
-  text-align: justify;
+  /*text-align: left;*/
 }
 
+@media(max-width: 550px){
+  img{
+    max-width: 150px;
+  }
+}
 
 </style>

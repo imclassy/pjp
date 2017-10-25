@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="vertical-center">
-        <div class="content col-md-6 col-md-offset-3">
+        <div class="content col-md-6  col-md-offset-3">
             <h1>{{title}}</h1>
             <br>
             <div id="figure-container">
@@ -92,5 +92,17 @@ figure{
 #figure-container{
   display: inline-block;
   margin-bottom: 30px;
+}
+
+@media(max-width: 550px){
+  figure{
+   display: block;
+   padding-right: 0px;
+   margin-bottom: 20px;
+  }
+  #figure-container{
+   display: block;
+   margin-bottom: 0px;
+  }
 }
 </style>

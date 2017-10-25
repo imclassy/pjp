@@ -45,4 +45,10 @@ img{
   max-height: 300px;
   border: 2px solid #FFFFFF;
 }
+
+@media(max-width: 500px){
+  img{
+    margin-bottom: 10px;
+  }
+}
 </style>

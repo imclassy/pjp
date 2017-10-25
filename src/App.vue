@@ -37,7 +37,7 @@
 
 .content{
   z-index: 999;
-  width: 100%;
+  /* width: 100%; */
 }
 
 </style>
