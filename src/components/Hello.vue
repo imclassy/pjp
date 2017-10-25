@@ -65,9 +65,6 @@ export default {
   border: 2px solid #FFFFFF;
 }
 
-p{
-  /*text-align: left;*/
-}
 
 @media(max-width: 550px){
   img{
