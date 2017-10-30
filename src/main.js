@@ -7,6 +7,7 @@ import store from './store'
 import 'jquery'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
+/* import 'd3/build/d3.min.js' */
 
 Vue.config.productionTip = false
 

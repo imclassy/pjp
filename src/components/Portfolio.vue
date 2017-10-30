@@ -4,6 +4,7 @@
           <div class="content col-md-6 col-md-offset-3">
               <h1>{{title}}</h1>
               <br>
+              <router-link to="/deaths">Deaths</router-link>
               <hr>
               <nav-links></nav-links>
           </div>
