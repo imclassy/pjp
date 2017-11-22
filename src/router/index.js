@@ -6,6 +6,7 @@ import Skills from '@/components/Skills'
 import Contact from '@/components/Contact'
 import Portfolio from '@/components/Portfolio'
 import Deaths from '@/components/portfolio/Deaths'
+import WhoDied from '@/components/portfolio/WhoDied'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/deaths/',
       name: 'Deaths',
       component: Deaths
+    },
+    {
+      path: '/who-died/',
+      name: 'WhoDied',
+      component: WhoDied
     }
   ]
 })

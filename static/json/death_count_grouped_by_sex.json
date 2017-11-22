@@ -1,0 +1,26 @@
+[
+  {
+    "frequency": 121395,
+    "value": {
+      "code": "1",
+      "name": "MALE",
+      "spanish_name": "MASCULINO"
+    }
+  },
+  {
+    "frequency": 98037,
+    "value": {
+      "code": "2",
+      "name": "FEMALE",
+      "spanish_name": "FEMENINO"
+    }
+  },
+  {
+    "frequency": 40,
+    "value": {
+      "code": "3",
+      "name": "UNKNOWN",
+      "spanish_name": "DESCONOCIDO"
+    }
+  }
+]
