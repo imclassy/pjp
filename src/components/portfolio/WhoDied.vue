@@ -4,11 +4,12 @@
         <div class="content col-md-6 col-md-offset-3">
             <header>
             <h1 class="text-center">{{title}}</h1>
+            {{intro}}
             </header>
             <section>
-                {{intro}}
+                <h3>Deaths by sex</h3>
+                <death-count-by-sex></death-count-by-sex>
             </section>
-            <death-count-by-sex></death-count-by-sex>
         </div>
       </div>
   </div>
@@ -34,3 +35,11 @@ export default {
 }
 
 </script>
+
+<style scoped>
+  section{
+    height: 400px;
+    width: 500px;
+  }
+</style>
+

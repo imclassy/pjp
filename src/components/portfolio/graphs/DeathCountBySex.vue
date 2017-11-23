@@ -16,7 +16,6 @@ export default {
   },
   mounted () {
     d3.json('/static/json/death_count_grouped_by_sex.json', function (data) {
-      console.log(data)
       nv.addGraph(function () {
         var chart = nv.models.pieChart()
             .x(function (d) { return d.value.name })
@@ -26,6 +25,8 @@ export default {
             .labelType('percent') // Configure what type of data to show in the label. Can be "key", "value" or "percent"
             .donut(true)          // Turn on Donut mode. Makes pie chart look tasty!
             .donutRatio(0.35)     // Configure how big you want the donut hole size to be.
+            .width(500)
+            .height(350)
 
         d3.select('#graph')
             .append('svg')
@@ -46,8 +47,8 @@ export default {
 
 <style scoped>
   #graph{
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
   }
   .nvd3 text {
    font: normal 12px Roboto !important;
