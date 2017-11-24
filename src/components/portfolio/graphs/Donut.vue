@@ -8,6 +8,12 @@ import * as d3 from 'd3'
 import * as nv from 'nvd3'
 export default {
   name: 'Donut',
+  props: ['data'],
+  methods: {
+    drawChart: function (data) {
+
+    }
+  },
   mounted () {
     d3.json('/static/json/death_count_grouped_by_sex.json', function (data) {
       var colors = {}
