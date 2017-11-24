@@ -7,7 +7,6 @@
             {{intro}}
             </header>
             <section>
-                <h3>Deaths by sex</h3>
                 <death-count-by-sex></death-count-by-sex>
             </section>
         </div>
@@ -38,8 +37,7 @@ export default {
 
 <style scoped>
   section{
-    height: 400px;
-    width: 500px;
+    height: 500px;
   }
 </style>
 
