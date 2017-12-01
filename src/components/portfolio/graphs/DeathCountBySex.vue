@@ -1,12 +1,9 @@
 <template>
-<<<<<<< HEAD
-  <div>
-    <donut></donut>
-=======
   <div id='death-count-by-sex-chart'>
+      <h4>Deaths by sex </h4>
       <donut :data="deathCountBySex" :width="chartDivWidth" :height="chartDivHeight"></donut>
       <p>Sample size: {{sampleSize}}</p>
->>>>>>> a87d2d8266b85969d98d8e27c2c71bc624e3459e
+      <p class="explanation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc augue dolor, pretium non enim quis, cursus placerat eros. Suspendisse est magna, sagittis quis posuere vel, rutrum id erat. Proin aliquam consequat purus quis euismod. Suspendisse eget metus quam. Ut lobortis, dui quis consequat tempus, lectus odio tempor enim, at vehicula diam ipsum vel libero. Pellentesque magna diam, volutpat at auctor laoreet, pharetra condimentum elit. Curabitur interdum neque est, eget aliquam neque maximus nec. Nulla viverra odio nec sem hendrerit, nec vestibulum tortor volutpat. Proin maximus leo mauris, et semper quam pharetra eu. Sed vel arcu diam. Mauris ac gravida ipsum. Sed lacinia nec tortor eget volutpat.</p>
   </div>
   
 </template>
@@ -37,7 +34,7 @@ export default {
     get_death_count: () => fetch('/static/json/death_count_grouped_by_sex.json')
                             .then(res => res.json()),
     updateChartDivSize: function (event) {
-      this.chartDivHeight = document.getElementById('death-count-by-sex-chart').offsetHeight
+      this.chartDivHeight = document.getElementById('death-count-by-sex-chart').offsetHeight * 0.8
       this.chartDivWidth = document.getElementById('death-count-by-sex-chart').offsetWidth
     }
   },
@@ -47,22 +44,7 @@ export default {
       this.updateChartDivSize()
     })
     this.get_death_count()
-        .then(data => {
-          let colors = {}
-          colors['MALE'] = '#247BA0'
-          colors['FEMALE'] = '#FF1654'
-          colors['UNKNOWN'] = '#F3FFBD'
-
-          let coloredData = []
-          for (var i = 0; i < data.length; i++) {
-            let coloredRecord = data[i]
-            coloredRecord.color = colors[coloredRecord.value.name]
-            coloredData.push(coloredRecord)
-          }
-
-          return coloredData
-        })
-    .then(deathCount => { this.deathCountBySex = deathCount })
+      .then(deathCount => { this.deathCountBySex = deathCount })
   },
   beforeDestroy () {
     window.removeEventListener('resize', this.updateChartDivSize)
@@ -72,6 +54,9 @@ export default {
 <style scoped>
   #death-count-by-sex-chart{
     height: 100%;
+  }
+  .explanation{
+    text-align: left;
   }
 </style>
 

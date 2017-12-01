@@ -1,11 +1,6 @@
 <template>
   <div id='graph'>
-<<<<<<< HEAD
-    <svg>
-    </svg>
-=======
     <svg id='graph-svg'></svg> 
->>>>>>> a87d2d8266b85969d98d8e27c2c71bc624e3459e
   </div>
 </template>
 
@@ -14,9 +9,10 @@ import * as d3 from 'd3'
 import * as nv from 'nvd3'
 export default {
   name: 'Donut',
-  props: ['data', 'width', 'height'],
+  props: ['data', 'width', 'height', 'colors'],
   methods: {
     drawChart: function () {
+      const defaultColors = ['#247BA0', '#FF1654', '#F3FFBD']
       this.chart = nv.models.pieChart()
             .x(function (d) { return d.value.name })
             .y(function (d) { return d.frequency })
@@ -27,7 +23,7 @@ export default {
             .donutRatio(0.35)     // Configure how big you want the donut hole size to be.
             .width(this.width)
             .height(this.height)
-            .color(function (d) { return d.color })
+            .color(this.color ? this.color : defaultColors)
             .id('piechart')
     }
   },
@@ -67,16 +63,6 @@ export default {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
-  .nvd3-svg{
-    height: 350 !important;
-  }
-  #graph{
-    width: 100%;
-    height: 100%;
-  }
-=======
->>>>>>> a87d2d8266b85969d98d8e27c2c71bc624e3459e
   .nvd3 text {
    font: normal 12px Roboto !important;
   }
