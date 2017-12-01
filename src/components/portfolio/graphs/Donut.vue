@@ -1,5 +1,7 @@
 <template>
   <div id='graph'>
+    <svg>
+    </svg>
   </div>
 </template>
 
@@ -8,19 +10,17 @@ import * as d3 from 'd3'
 import * as nv from 'nvd3'
 export default {
   name: 'Donut',
+  props: ['colors'],
   mounted () {
-    d3.json('/static/json/death_count_grouped_by_sex.json', function (data) {
-      var colors = {}
-      colors['MALE'] = '#247BA0'
-      colors['FEMALE'] = '#FF1654'
-      colors['UNKNOWN'] = '#F3FFBD'
-
-      var coloredData = []
-      for (var i = 0; i < data.length; i++) {
-        var coloredRecord = data[i]
-        coloredRecord.color = colors[coloredRecord.value.name]
-        coloredData.push(coloredRecord)
+    var col = this.colors
+    const _colors = function () {
+      const defaultColors = ['#247BA0', '#FF1654', '#F3FFBD']
+      if (col) {
+        return col
       }
+      return defaultColors
+    }
+    d3.json('/static/json/death_count_grouped_by_sex.json', function (data) {
       nv.addGraph(function () {
         var chart = nv.models.pieChart()
             .x(function (d) { return d.value.name })
@@ -32,12 +32,11 @@ export default {
             .donutRatio(0.35)     // Configure how big you want the donut hole size to be.
             .width(500)
             .height(350)
-            .color(function (d) { return d.color })
+            .color(_colors())
             .id('piechart')
 
-        d3.select('#graph')
-            .append('svg')
-            .datum(coloredData)
+        d3.select('#graph svg')
+            .datum(data)
             .transition().duration(350)
             .call(chart)
 
@@ -54,6 +53,9 @@ export default {
 </script>
 
 <style scoped>
+  .nvd3-svg{
+    height: 350 !important;
+  }
   #graph{
     width: 100%;
     height: 100%;
