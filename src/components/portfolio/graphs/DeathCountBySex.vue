@@ -1,6 +1,6 @@
 <template>
   <div id='death-count-by-sex-chart'>
-      <h4>Deaths by sex </h4>
+      <h4>Deaths by sex</h4>
       <donut :data="deathCountBySex" :width="chartDivWidth" :height="chartDivHeight"></donut>
       <p>Sample size: {{sampleSize}}</p>
       <p class="explanation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc augue dolor, pretium non enim quis, cursus placerat eros. Suspendisse est magna, sagittis quis posuere vel, rutrum id erat. Proin aliquam consequat purus quis euismod. Suspendisse eget metus quam. Ut lobortis, dui quis consequat tempus, lectus odio tempor enim, at vehicula diam ipsum vel libero. Pellentesque magna diam, volutpat at auctor laoreet, pharetra condimentum elit. Curabitur interdum neque est, eget aliquam neque maximus nec. Nulla viverra odio nec sem hendrerit, nec vestibulum tortor volutpat. Proin maximus leo mauris, et semper quam pharetra eu. Sed vel arcu diam. Mauris ac gravida ipsum. Sed lacinia nec tortor eget volutpat.</p>
@@ -21,6 +21,9 @@ export default {
     sampleSize: function () {
       let count = this.deathCountBySex
       return count ? count.map(rec => rec.frequency).reduce((a, b) => a + b, 0) : 0
+    },
+    translatedDeathCount: function () {
+      return this.adaptToLanguage(this.deathCountBySex)
     }
   },
   data () {
@@ -36,6 +39,13 @@ export default {
     updateChartDivSize: function (event) {
       this.chartDivHeight = document.getElementById('death-count-by-sex-chart').offsetHeight * 0.8
       this.chartDivWidth = document.getElementById('death-count-by-sex-chart').offsetWidth
+    },
+    adaptToLanguage: function (deathCount) {
+      let isEnglish = this.english
+      const translate = function (record) {
+        return { frequency: record.frequency, value: { code: record.value.code, name: isEnglish ? record.value.name : record.value.spanish_name } }
+      }
+      return deathCount.map(translate)
     }
   },
   mounted () {
